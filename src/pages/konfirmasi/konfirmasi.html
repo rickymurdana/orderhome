@@ -4,11 +4,11 @@
 
 <ion-content>
 	<ion-item>
-		<div>
+		<div item-left>
 			Rincian Biaya
 		</div>
 		<div item-right>
-			date
+			<ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
 		</div>
 	</ion-item>
 	<ion-list>

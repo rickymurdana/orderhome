@@ -3,7 +3,21 @@
 </ion-header>
 
 <ion-content>
+	<div class text-center>
+		<img src="img/lpg.jpg">
+	</div>
+	<p text-center>
+		Nama Toko
+	</p>
   <ion-rating [leitura]="false" (ionCLick)="log($event)">
-
   </ion-rating>
+  <ion-card>
+  	<ion-card-header>
+  		Ulasan
+  	</ion-card-header>
+  	<ion-card-content>
+  		<ion-input type="text"></ion-input>
+  	</ion-card-content>
+  </ion-card>
+
 </ion-content>

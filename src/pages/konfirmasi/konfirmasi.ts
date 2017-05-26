@@ -12,6 +12,10 @@ export class KonfirmasiPage {
 
   }
 
+  public event = {
+  	month: '2017-05-26'
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReviewPage');
   }
