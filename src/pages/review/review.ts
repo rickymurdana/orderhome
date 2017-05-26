@@ -8,7 +8,10 @@ import { NavController } from 'ionic-angular';
 export class ReviewPage {
 
   constructor(public navCtrl: NavController) {
+  }
 
+  log(valor){
+  	console.log(valor);
   }
 
 }

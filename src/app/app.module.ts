@@ -10,8 +10,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ReviewPage } from '../pages/review/review';
 import { KonfirmasiPage } from '../pages/konfirmasi/konfirmasi';
 
+import { IonRating } from '../components/ion-rating/ion-rating';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DaftarPage,
     TabsPage,
     ReviewPage,
-    KonfirmasiPage
+    KonfirmasiPage,
+    IonRating
   ],
   imports: [
     BrowserModule,
