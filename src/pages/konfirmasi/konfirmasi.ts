@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { ReviewPage } from '../review/review';
-import { NavController } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { NavController, Tabs } from 'ionic-angular';
 
 @Component({
   selector: 'page-konfirmasi',
   templateUrl: 'konfirmasi.html'
 })
 export class KonfirmasiPage {
-
+  tab: Tabs;
   constructor(public navCtrl: NavController) {
-
+  	this.tab = this.navCtrl.parent;
   }
 
   public event = {
@@ -21,7 +21,7 @@ export class KonfirmasiPage {
   }
 
   pindahReview(){
-	this.navCtrl.push(ReviewPage);
+	this.tab.select(4);
   }
 
 }

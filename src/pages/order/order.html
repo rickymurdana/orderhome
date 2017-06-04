@@ -5,29 +5,52 @@
 <ion-content>
   <ion-list no-border>
           <ion-item>
-          <ion-label>Galon</ion-label>
+          <ion-label>Galon Aqua</ion-label>
             <img src='img/galon.jpg' width="15%" height="18%" item-left>
-            <ion-select name="galon">
-                    <ion-option value="aqua">Aqua</ion-option>
-                    <ion-option value="vit">Vit</ion-option>
-            </ion-select>
           </ion-item>
           <ion-grid>
             <ion-row justify-content-between>
               <ion-col col-3>
-                Rp.{{galonharga}}
+                Rp.{{galonhargaaqua}}
               </ion-col>
               <ion-col col-3>
                 <ion-grid>
                   <ion-row>
                     <ion-col>
-                      <ion-icon icon-only name="remove-circle" (click)="galonkurang()"></ion-icon>
+                      <ion-icon icon-only name="remove-circle" (click)="galonkurangaqua()"></ion-icon>
                     </ion-col>
                     <ion-col>
-                      {{jumlahgalon}}
+                      {{jumlahgalonaqua}}
                     </ion-col>
                     <ion-col>
-                      <ion-icon icon-only name="add-circle" (click)="galontambah()"></ion-icon>
+                      <ion-icon icon-only name="add-circle" (click)="galontambahaqua()"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+           <ion-item>
+          <ion-label>Galon Prima</ion-label>
+            <img src='img/galon.jpg' width="15%" height="18%" item-left>
+          </ion-item>
+          <ion-grid>
+            <ion-row justify-content-between>
+              <ion-col col-3>
+                Rp.{{galonhargaprima}}
+              </ion-col>
+              <ion-col col-3>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon icon-only name="remove-circle" (click)="galonkurangprima()"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      {{jumlahgalonprima}}
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon icon-only name="add-circle" (click)="galontambahprima()"></ion-icon>
                     </ion-col>
                   </ion-row>
                 </ion-grid>
@@ -36,30 +59,53 @@
           </ion-grid>
 
           <ion-item>
-          <ion-label>LPG</ion-label>
+          <ion-label>LPG 3kg</ion-label>
             <img src='img/lpg.jpg' width="22%" height="22%" item-left>
-               <ion-select name="LPG">
-                    <ion-option value="satu">3 kg</ion-option>
-                    <ion-option value="dua">12 kg</ion-option>
-                </ion-select>
           </ion-item>
-        </ion-list>
          <ion-grid>
             <ion-row justify-content-between>
               <ion-col col-3>
-                Rp.{{hargalpg}}
+                Rp.{{hargalpgtiga}}
               </ion-col>
               <ion-col col-3>
                 <ion-grid>
                   <ion-row>
                     <ion-col>
-                      <ion-icon icon-only name="remove-circle" (click)="lpgkurang()"></ion-icon>
+                      <ion-icon icon-only name="remove-circle" (click)="lpgkurangtiga()"></ion-icon>
                     </ion-col>
                     <ion-col>
-                      {{jumlahlpg}}
+                      {{jumlahlpgtiga}}
                     </ion-col>
                     <ion-col>
-                      <ion-icon icon-only name="add-circle" (click)="lpgtambah()"></ion-icon>
+                      <ion-icon icon-only name="add-circle" (click)="lpgtambahtiga()"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-item>
+          <ion-label>LPG 12kg</ion-label>
+            <img src='img/lpg12.jpg' width="22%" height="22%" item-left>
+          </ion-item>
+        </ion-list>
+         <ion-grid>
+            <ion-row justify-content-between>
+              <ion-col col-3>
+                Rp.{{hargalpgduabelas}}
+              </ion-col>
+              <ion-col col-3>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon icon-only name="remove-circle" (click)="lpgkurangduabelas()"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      {{jumlahlpgduabelas}}
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon icon-only name="add-circle" (click)="lpgtambahduabelas()"></ion-icon>
                     </ion-col>
                   </ion-row>
                 </ion-grid>

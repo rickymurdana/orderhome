@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+//import { Storage } from '@ionic/storage';
 
 import { OrderPage } from '../pages/order/order';
 import { AlamatPage } from '../pages/alamat/alamat';
@@ -13,6 +14,7 @@ import { KonfirmasiPage } from '../pages/konfirmasi/konfirmasi';
 import { IonRating } from '../components/ion-rating/ion-rating';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+//import { UserDataProvider } from '../pages/providers/user-data';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReviewPage,
     KonfirmasiPage,
     IonRating
+   // UserDataProvider
   ],
   imports: [
     BrowserModule,
@@ -38,12 +41,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DaftarPage,
     TabsPage,
     ReviewPage,
-    KonfirmasiPage
+    KonfirmasiPage,
+   // UserDataProvider
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+   // UserDataProvider,
+   // Storage
   ]
 })
 export class AppModule {}

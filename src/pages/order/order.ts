@@ -1,42 +1,70 @@
 import { Component } from '@angular/core';
-import { AlamatPage } from '../alamat/alamat';
-import { IonicPage, NavController, NavParams, Tabs } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { NavController, NavParams, Tabs } from 'ionic-angular';
 
 @Component({
     templateUrl: 'order.html'
 })
 export class OrderPage {
 	tab:Tabs;
-	jumlahgalon=0;
-	galonharga=0;
-	hargalpg=0;
-	jumlahlpg=0;
+	jumlahgalonaqua=0;
+	galonhargaaqua=0;
+	jumlahgalonprima=0;
+	galonhargaprima=0;
+	hargalpgtiga=0;
+	jumlahlpgtiga=0;
+	hargalpgduabelas=0;
+	jumlahlpgduabelas=0;
 	constructor(public navCtrl: NavController){
 		this.tab = this.navCtrl.parent;
 	}
 
-	galonkurang(){
-		if (this.jumlahgalon > 0){
-		this.jumlahgalon--;
-		this.galonharga = this.galonharga - 15000;
+	galonkurangaqua(){
+		if (this.jumlahgalonaqua > 0){
+		this.jumlahgalonaqua--;
+		this.galonhargaaqua = this.galonhargaaqua - 15000;
 		}
 	}
 
-	galontambah(){
-		this.jumlahgalon++;
-		this.galonharga = this.galonharga + 15000;
+	galontambahaqua(){
+		this.jumlahgalonaqua++;
+		this.galonhargaaqua = this.galonhargaaqua + 15000;
 	}
 
-	lpgkurang(){
-		if (this.jumlahlpg > 0){
-		this.jumlahlpg--;
-		this.hargalpg = this.hargalpg - 15000;
+	galonkurangprima(){
+		if (this.jumlahgalonprima > 0){
+		this.jumlahgalonprima--;
+		this.galonhargaprima = this.galonhargaprima - 12000;
 		}
 	}
 
-	lpgtambah(){
-		this.jumlahlpg++;
-		this.hargalpg = this.hargalpg + 15000;
+	galontambahprima(){
+		this.jumlahgalonprima++;
+		this.galonhargaprima = this.galonhargaprima + 12000;
+	}
+
+	lpgkurangtiga(){
+		if (this.jumlahlpgtiga > 0){
+		this.jumlahlpgtiga--;
+		this.hargalpgtiga = this.hargalpgtiga - 20000;
+		}
+	}
+
+	lpgtambahtiga(){
+		this.jumlahlpgtiga++;
+		this.hargalpgtiga = this.hargalpgtiga + 20000;
+	}
+
+	lpgkurangduabelas(){
+		if (this.jumlahlpgduabelas > 0){
+		this.jumlahlpgduabelas--;
+		this.hargalpgduabelas = this.hargalpgduabelas - 200000;
+		}
+	}
+
+	lpgtambahduabelas(){
+		this.jumlahlpgduabelas++;
+		this.hargalpgduabelas = this.hargalpgduabelas + 200000;
 	}
 
 	ionViewDidLoad() {
@@ -44,6 +72,6 @@ export class OrderPage {
   }
 
 	pindahAlamat(){
-		this.navCtrl.push(AlamatPage);
+		this.tab.select(2);
 	}
  }

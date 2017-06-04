@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Tabs } from 'ionic-angular';
 
 @Component({
   selector: 'page-review',
   templateUrl: 'review.html'
 })
 export class ReviewPage {
-
+  tab:Tabs;
+  bintang=0;
   constructor(public navCtrl: NavController) {
   }
 
-  log(valor){
-  	console.log(valor);
-  }
+  kurangbintang(){
+		if (this.bintang > 0 && this.bintang <= 5){
+		this.bintang--;
+		}
+	}
 
+	tambahbintang(){
+    if(this.bintang <= 5)
+		this.bintang++;
+	}
+  
 }

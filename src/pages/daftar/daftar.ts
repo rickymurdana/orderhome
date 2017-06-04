@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
-import { OrderPage } from '../order/order';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { NavController, Tabs } from 'ionic-angular';
 
 
 @Component({
   templateUrl: 'daftar.html'
 })
 export class DaftarPage {
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	tab: Tabs;
+	constructor(public navCtrl: NavController) {
+		this.tab = this.navCtrl.parent;
   }
 
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OrderPage');
+  pesan(){
+  	this.tab.select(1);
   }
-
-	pesan(){
-		this.navCtrl.push(OrderPage);
-	}
 }

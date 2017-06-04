@@ -3,14 +3,29 @@
 </ion-header>
 
 <ion-content>
-	<div class text-center>
-		<img src="img/lpg.jpg">
-	</div>
-	<p text-center>
-		Nama Toko
-	</p>
-  <ion-rating [leitura]="false" (ionCLick)="log($event)">
-  </ion-rating>
+	<h5>
+		Stars
+	</h5>
+  <ion-grid>
+	  <ion-row>
+			  <ion-col col-3>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-icon icon-only name="arrow-dropdown-circle" (click)="kurangbintang()"></ion-icon>
+                    </ion-col>
+                    <ion-col>
+                      {{bintang}}
+                    </ion-col>
+                    <ion-col>
+                      <ion-icon icon-only name="arrow-dropup-circle" (click)="tambahbintang()"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+		  </ion-col>
+	  </ion-row>
+  </ion-grid>
+	
   <ion-card>
   	<ion-card-header>
   		Ulasan
