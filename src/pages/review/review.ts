@@ -12,14 +12,14 @@ export class ReviewPage {
   }
 
   kurangbintang(){
-		if (this.bintang > 0 && this.bintang <= 5){
-		this.bintang--;
-		}
+		if(this.bintang > 0 && this.bintang <= 5){
+      this.bintang--;
+    }
 	}
 
 	tambahbintang(){
-    if(this.bintang <= 5)
+    if(this.bintang < 5){
 		this.bintang++;
 	}
-  
+  }
 }
